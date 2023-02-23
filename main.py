@@ -25,10 +25,10 @@ def num_to_text(number):
 # -----------------------Введение проверочных цифр-----------------------
 
 control_line = str(input('Введите цифры: '))
+control_line = re.sub('\D', '', control_line)
 control_num = []
 for i in range(len(control_line)):
-    if control_line[i] in num_list:
-        control_num.append(control_line[i])
+    control_num.append(control_line[i])
 
 print('-------')
 
